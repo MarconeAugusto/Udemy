@@ -1,0 +1,8 @@
+Perguntas dessa tarefa
+Como você automatizou a ação "Passar o mouse por cima da categoria "Women" no menu principal superior de categorias." do caso de teste nº 03?
+
+Mouse Over                        xpath=//*[@id="block_top_menu"]//a[@class="sf-with-ul"][contains(text(),"${CATEGORIA}")]
+
+Como você fez para não repetir o e-mail informado na ação "Informar um e-mail válido" do caso de teste nº 06?
+
+Como você fez para conseguir selecionar uma opção na lista de Estados (State) do cadastro de um novo cliente, do caso de teste nº 06?

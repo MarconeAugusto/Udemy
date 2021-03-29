@@ -18,15 +18,16 @@ Caso de teste 02: Pesquisar produto não existente
 
 Caso de teste 03: Listar produtos
     Dado que estou na página home do site
-    Quando eu passar o mouse por cima da categoria "Women" no menu principal superior de categorias
-    Quando eu clicar na sub categoria "Summer Dresses"
+    E eu passo o mouse por cima da categoria "Women" no menu principal superior de categorias
+    Quando eu clico na sub categoria "Summer Dresses"
     Então uma página com os produtos da categoria selecionada deve ser exibida
 
 Caso de teste 04: Adicionar produtos no carrinho
     Dado que estou na página home do site
     Quando eu pesquisar pelo produto "t-shirt"
-    Quando eu clicar no botão "Add to cart" do produto
-    Então eu clico no botão "Proceed to checkout"
+    E eu clicar no botão "Add to cart" do produto
+    Quando eu clico no botão "Proceed to checkout"
+ #   Então a tela do carrinho de compras deve ser exibido, juntamente com os dados do produto adicionado e os devidos valores.
 
 *** Keywords ***
 Dado que estou na página home do site
@@ -42,17 +43,17 @@ Então o produto "${PRODUTO}" deve ser listado na página de resultado da busca
 Então a página deve exibir a mensagem "No results were found for your search "produtoNãoExistente""
     Conferir mensagem de erro "No results were found for your search "produtoNãoExistente""
 
-Quando eu passar o mouse por cima da categoria "${CATEGORIA}" no menu principal superior de categorias
-    Mause sobre a categoria "${CATEGORIA}"
+E eu passo o mouse por cima da categoria "${CATEGORIA}" no menu principal superior de categorias    Mause sobre a categoria "${CATEGORIA}"
 
-Quando eu clicar na sub categoria "${CATEGORIA}"
+Quando eu clico na sub categoria "${CATEGORIA}"
     Clicar na sub categoria "${CATEGORIA}"
 
 Então uma página com os produtos da categoria selecionada deve ser exibida
     Conferir categoria Summer Dresses
 
-Quando eu clicar no botão "Add to cart" do produto
+E eu clicar no botão "Add to cart" do produto
     Clicar no botão "Add to cart" do produto
 
-Então eu clico no botão "Proceed to checkout"
+Quando eu clico no botão "${BOTAO}"
+    Clicar no botão "${BOTAO}"
 ## Corrigir a expectativa nos casos 3 e 4

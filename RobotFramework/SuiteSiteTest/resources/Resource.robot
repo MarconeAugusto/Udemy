@@ -54,3 +54,10 @@ Clicar no botão "Add to cart" do produto
     Wait Until Element is Visible     xpath=//*[@id="center_column"]/h1
     Mouse Over                        xpath=//*[@id="center_column"]/ul/li/div/div[1]/div/a[1]/img
     Click Element                     xpath=//*[@id="center_column"]//*[@class="button ajax_add_to_cart_button btn btn-default"]
+    Wait Until Element Is Visible     xpath=//*[@id="layer_cart_product_title"][contains(text(),"Faded Short Sleeve T-shirts")]
+    Page Should Contain Element       xpath=//*[@id="layer_cart"]//*[contains(text(),"Proceed to checkout")]
+
+
+Clicar no botão "${BOTAO}"
+    Click Element                     xpath=//*[@id="layer_cart"]//span[contains(text(),"${BOTAO}")]
+    Wait Until Element is Visible     xpath=//*[@id="cart_title"][contains(text(),"Shopping-cart summary")]
