@@ -1,7 +1,0 @@
-1616716862230	geckodriver	INFO	Listening on 127.0.0.1:38965
-1616716862236	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileOmAsQn"
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
-1616716863957	Marionette	INFO	Listening on port 39095
-1616716864286	Marionette	WARN	TLS certificate errors will be ignored for this session
-JavaScript error: http://automationpractice.com/js/jquery/jquery-1.11.0.min.js, line 2: NS_ERROR_NOT_INITIALIZED: 
-1616716868483	Marionette	INFO	Stopped listening on port 39095

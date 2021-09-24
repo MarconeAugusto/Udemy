@@ -56,4 +56,4 @@ E eu clicar no botão "Add to cart" do produto
 
 Quando eu clico no botão "${BOTAO}"
     Clicar no botão "${BOTAO}"
-## Corrigir a expectativa nos casos 3 e 4
+## Corrigir a expectativa nos casos 3 e 4 teste
