@@ -27,7 +27,12 @@ Caso de teste 04: Adicionar produtos no carrinho
     Quando eu pesquisar pelo produto "t-shirt"
     E eu clicar no botão "Add to cart" do produto
     Quando eu clico no botão "Proceed to checkout"
- #   Então a tela do carrinho de compras deve ser exibido, juntamente com os dados do produto adicionado e os devidos valores.
+    Então a tela do carrinho de compras deve ser exibido, juntamente com os dados do produto adicionado e os devidos valores
+
+Caso de teste 05: Remover produtos
+    Dado que estou na página home do site
+    E eu clicar no ícone do carrinho de compras
+    Então clicar no botão de remoção de produtos (delete) no produto do carrinho
 
 *** Keywords ***
 Dado que estou na página home do site
@@ -43,7 +48,8 @@ Então o produto "${PRODUTO}" deve ser listado na página de resultado da busca
 Então a página deve exibir a mensagem "No results were found for your search "produtoNãoExistente""
     Conferir mensagem de erro "No results were found for your search "produtoNãoExistente""
 
-E eu passo o mouse por cima da categoria "${CATEGORIA}" no menu principal superior de categorias    Mause sobre a categoria "${CATEGORIA}"
+E eu passo o mouse por cima da categoria "${CATEGORIA}" no menu principal superior de categorias
+    Mouse sobre a categoria "${CATEGORIA}"
 
 Quando eu clico na sub categoria "${CATEGORIA}"
     Clicar na sub categoria "${CATEGORIA}"
@@ -51,9 +57,17 @@ Quando eu clico na sub categoria "${CATEGORIA}"
 Então uma página com os produtos da categoria selecionada deve ser exibida
     Conferir categoria Summer Dresses
 
-E eu clicar no botão "Add to cart" do produto
-    Clicar no botão "Add to cart" do produto
+E eu clicar no botão "${BOTAO}" do produto
+    Clicar no botão "${BOTAO}" do produto
 
 Quando eu clico no botão "${BOTAO}"
     Clicar no botão "${BOTAO}"
-## Corrigir a expectativa nos casos 3 e 4 teste
+
+Então a tela do carrinho de compras deve ser exibido, juntamente com os dados do produto adicionado e os devidos valores
+    Verificar produto e valores
+
+E eu clicar no ícone do carrinho de compras
+    Acessar o carrinho de compras
+
+Então clicar no botão de remoção de produtos (delete) no produto do carrinho
+    Limpar o carrinho de compras
